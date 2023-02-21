@@ -1,0 +1,74 @@
+.container{
+    margin-top: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.progressbar{
+    position: relative;
+    display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+}
+.progressbar::before, .progress{
+    content:"";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+   z-index: -1;
+}
+.btn{
+    color: aliceblue;
+    display: block;
+    background-color: blue;
+   
+}
+.progress{
+    background-color: blue;
+    width: 20%;
+}
+
+.progress-step{
+    width: 2rem;
+    height: 2rem;
+    background-color:  #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+}
+
+.progress-step-active{
+    background-color: blue;
+    color: #f3f3f3;
+}
+
+.form-step{
+    display: none;
+}
+.form-step-active{
+    display: block;
+}
+.img1{
+    width: 30%;
+    height: 30px;
+}
+.img{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.heading{
+    padding-top: 30px;
+}
+.rounded{
+    height: 70px;
+}
